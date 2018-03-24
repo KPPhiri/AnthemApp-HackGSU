@@ -1,7 +1,10 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,10 +25,20 @@ public class emoji_response extends AppCompatActivity {
     Button button3;
     Button button4;
 
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mTog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emoji_response);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mTog);
+        mTog.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         emoji = (ImageView) findViewById(R.id.emoji_imageView);
         emoji_emotion = (TextView) findViewById(R.id.emoji_emotion);
         button1 = (Button) findViewById(R.id.response1);
@@ -75,5 +88,13 @@ public class emoji_response extends AppCompatActivity {
             button2.setText("I couldn't ask for a better team!");
             button3.setText("I am excited for the opportunities at my company.");
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mTog.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
