@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fill background with a solid color-->
+    <item
+        android:drawable="@color/colorAccent"/>
+    <!-- Place bitmap in center-->
+    <item
+        android:width="200dp"
+        android:height="200dp"
+        android:gravity="center">
+        <bitmap
+            android:src="@drawable/temp"/>
+    </item>
+    <item
+        android:top="20dp"
+        android:width="200dp"
+        android:height="100dp"
+        android:gravity="top|center_horizontal">
+        <bitmap
+            android:src="@drawable/temp"/>
+    </item>
+</layer-list>

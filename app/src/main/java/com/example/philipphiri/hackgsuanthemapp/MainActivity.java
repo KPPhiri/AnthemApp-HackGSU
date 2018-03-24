@@ -1,7 +1,9 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
 import android.content.Intent;
+
 import android.graphics.drawable.Drawable;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         one = (ImageButton) findViewById(R.id.imageButton1);
         findViewById(R.id.imageButton1).setOnClickListener(this);
         two = (ImageButton) findViewById(R.id.imageButton2);
@@ -147,6 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //button.setBackgroundResource(background);
             }
         }
+
     }
 
 }
