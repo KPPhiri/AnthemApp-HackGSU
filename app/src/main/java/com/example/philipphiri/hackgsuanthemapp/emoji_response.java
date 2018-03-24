@@ -9,6 +9,7 @@ public class emoji_response extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emoji_response);
 //        ImageView emoji = (ImageView) findViewById(R.id.emoji_imageView);
