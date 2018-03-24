@@ -106,7 +106,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@null"/>
 
-
     <Button
         android:id="@+id/why_button"
         android:layout_width="wrap_content"
@@ -124,10 +123,10 @@
 
     </android.support.constraint.ConstraintLayout>
     <android.support.design.widget.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:menu="@menu/drawermenu"
-        android:layout_gravity="start">
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:menu="@menu/drawermenu"
+    android:layout_gravity="start">
 
-    </android.support.design.widget.NavigationView>
+</android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>
