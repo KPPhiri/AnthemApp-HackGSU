@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="emoji_array">
+        <item>@drawable/emoji1</item>
+        <item>@drawable/emoji2</item>
+        <item>@drawable/emoji3</item>
+        <item>@drawable/emoji4</item>
+    </integer-array>
+</resources>
