@@ -4,9 +4,12 @@ import android.content.Intent;
 
 import android.graphics.drawable.Drawable;
 
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -19,11 +22,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean butOne, butTwo, butThree, butFour, butFive;
     private List<ImageButton> buttons;
 
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mTog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mTog);
+        mTog.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         one = (ImageButton) findViewById(R.id.imageButton1);
         findViewById(R.id.imageButton1).setOnClickListener(this);
@@ -154,4 +165,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mTog.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

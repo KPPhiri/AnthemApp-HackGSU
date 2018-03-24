@@ -18,9 +18,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:label="Emotions"></activity>
   
-        <activity android:name=".emoji_response"></activity>
+        <activity android:name=".emoji_response"
+            android:label="Feeling..."></activity>
 
     </application>
 
