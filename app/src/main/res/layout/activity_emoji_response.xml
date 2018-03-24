@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/emoji_imageView"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="112dp"
+        android:layout_height="113dp"
         android:layout_marginBottom="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -24,19 +24,22 @@
 
     <TextView
         android:id="@+id/emoji_emotion"
-        android:layout_width="79dp"
-        android:layout_height="37dp"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:text="TextView"
+        android:textAllCaps="true"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <GridLayout
         android:layout_width="322dp"
@@ -52,7 +55,7 @@
         app:layout_constraintVertical_bias="0.773">
 
         <Button
-            android:id="@+id/reponse2"
+            android:id="@+id/response2"
             android:layout_width="160dp"
             android:layout_height="120dp"
             android:layout_column="2"
@@ -70,7 +73,7 @@
             android:text="Button" />
 
         <Button
-            android:id="@+id/reponse1"
+            android:id="@+id/response1"
             android:layout_width="160dp"
             android:layout_height="120dp"
             android:layout_column="1"

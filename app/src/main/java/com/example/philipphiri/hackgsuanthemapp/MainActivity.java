@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
@@ -19,8 +20,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private ImageButton one, two, three, four, five;
-    private boolean butOne, butTwo, butThree, butFour, butFive;
+    public static boolean butOne, butTwo, butThree, butFour, butFive;
     private List<ImageButton> buttons;
+    private Button whyButton;
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mTog;
@@ -59,6 +61,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         butThree = true;
         butFour = true;
         butFive = true;
+
+        whyButton = (Button)findViewById(R.id.why_button);
+        whyButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,emoji_response.class));
+            }
+        });
 
 
 //
