@@ -136,7 +136,8 @@ public class emoji_response extends AppCompatActivity {
                 if (buttonNewResponse) {
                     startActivity(new Intent(emoji_response.this, elaborate_activity.class));
                 } else {
-                    //trigger popup saying to select one
+                    startActivity(new Intent(emoji_response.this, Feed_Activity.class));
+
                 }
             }
         });

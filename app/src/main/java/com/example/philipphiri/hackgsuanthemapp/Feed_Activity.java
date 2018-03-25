@@ -1,0 +1,54 @@
+package com.example.philipphiri.hackgsuanthemapp;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+public class Feed_Activity extends AppCompatActivity {
+    ListView listViewComments;
+    List<String> comments;
+    Button stats;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_feed_);
+        comments = new ArrayList<>();
+        comments.add("3/20: No I do not feel good working with a manager that talks down at me.");
+        comments.add("3/20: I used to take pride in what I did, now I feel like I let the customer down...");
+        comments.add("3/21: I will do my best regardless of what I am doing.");
+        comments.add("3/22: I'm enjoying the updates to the break room!");
+        comments.add("3/22: Stop the favoritism!!!!!!!!!!!!");
+        comments.add("3/23: My manager makes me feel like he is always busy and I feel like I am interrupting him");
+        comments.add("3/23: Today really proved team work really does make the dream work");
+        comments.add("3/23: I look for new jobs daily. Hopefully I will be out of here soon");
+
+
+
+
+        listViewComments = (ListView) findViewById(R.id.commentList);
+        stats = (Button) findViewById(R.id.stats);
+        listViewComments.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1 , comments));
+        stats.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(Feed_Activity.this, Vitals_Activity.class));
+            }
+        });
+}
+
+
+
+
+    }
+

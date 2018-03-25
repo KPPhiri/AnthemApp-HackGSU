@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HackGSUAnthemApp.iml" filepath="$PROJECT_DIR$/HackGSUAnthemApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HackGSU-AnthemApp.iml" filepath="$PROJECT_DIR$/HackGSU-AnthemApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
