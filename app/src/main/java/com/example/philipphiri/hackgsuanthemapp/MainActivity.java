@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // add navigation drawer item onclick method here
                         break;
                     case R.id.about:
-                        //Do some thing here
+                        startActivity(new Intent(MainActivity.this, aboutPage.class));
                         // add navigation drawer item onclick method here
                         break;
                 }
