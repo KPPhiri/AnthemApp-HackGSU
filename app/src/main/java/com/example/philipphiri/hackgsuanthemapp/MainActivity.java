@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static boolean butOne, butTwo, butThree, butFour, butFive;
     private List<ImageButton> buttons;
     private Button whyButton;
+    //testing
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mTog;
