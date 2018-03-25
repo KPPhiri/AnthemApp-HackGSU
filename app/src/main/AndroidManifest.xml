@@ -23,7 +23,7 @@
             android:label="Emotions" />
         <activity
             android:name=".emoji_response"
-            android:label="Feeling..." />
+            android:label="Feeling…" />
         <activity android:name=".FeedActivity"
             android:label="Feed"></activity>
     </application>
