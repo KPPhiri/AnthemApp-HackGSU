@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butFive = true;
         } else if (view.getId() == R.id.imageButton4) {
             enlarge(four, R.drawable.four, R.id.imageButton4, butFour);
-            butOne = !true;
+            butOne = !true; //is this right?
             butTwo = true;
             butThree = true;
             butFour = !butFour;
