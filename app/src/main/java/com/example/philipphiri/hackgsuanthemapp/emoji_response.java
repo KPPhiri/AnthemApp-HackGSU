@@ -107,7 +107,7 @@ public class emoji_response extends AppCompatActivity {
                 if (buttonNewResponse) {
                     startActivity(new Intent(emoji_response.this, elaborate_activity.class));
                 } else {
-                    //trigger popup
+                    startActivity(new Intent(emoji_response.this, Vitals_Activity.class));
                 }
             }
         });
