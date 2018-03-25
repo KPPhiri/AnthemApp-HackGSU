@@ -3,5 +3,5 @@
     <item android:id="@+id/myVitals" android:title="My Vitals" android:icon="@drawable/ic_android_black_24dp"/>
     <item android:id="@+id/teamVitals" android:title="Team Vitals"/>
     <item android:id="@+id/companyVitals" android:title="Company Vitals"/>
-    <item android:id="@+id/about" android:title="About"/>
+    <item android:id="@+id/about" android:title="About" android:icon="@drawable/ic_android_black_24dp"/>
 </menu>
