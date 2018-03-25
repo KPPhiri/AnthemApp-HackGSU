@@ -1,7 +1,9 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
+import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.text.Html;
 import android.view.View;
 import android.support.v4.widget.DrawerLayout;
@@ -19,7 +21,7 @@ import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butFour;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butOne;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butThree;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butTwo;
-
+@TargetApi(27)
 public class emoji_response extends AppCompatActivity {
 
     ImageView emoji;
@@ -136,7 +138,7 @@ public class emoji_response extends AppCompatActivity {
                 if (buttonNewResponse) {
                     startActivity(new Intent(emoji_response.this, elaborate_activity.class));
                 } else {
-                    startActivity(new Intent(emoji_response.this, Feed_Activity.class));
+                    //startActivity(new Intent(emoji_response.this, Feed_Activity.class));
 
                 }
             }
@@ -161,33 +163,32 @@ public class emoji_response extends AppCompatActivity {
         msg = myDialog.findViewById(R.id.contentmsg);
         if (butOne == false) {
             String first = "I am feeling ";
-            String next = "<font color='#E4A130'>exhausted</font> ";
-            String last = "because";
+            String next = "<font color='#E4A130'>exhausted</font>";
+            String last = " because";
             msg.setText(Html.fromHtml(first + next + last));
-            //msg.setText("I am feeling exhausted because");
 
         } else if (butTwo == false) {
             String first = "I am feeling ";
             String next = "<font color='#E4A130'>anxious</font> ";
-            String last = "because";
+            String last = " because";
             msg.setText(Html.fromHtml(first + next + last));
             //msg.setText("I am feeling anxious because");
         } else if (butThree == false) {
             String first = "I am feeling ";
             String next = "<font color='#E4A130'>content</font> ";
-            String last = "because";
+            String last = " because";
             msg.setText(Html.fromHtml(first + next + last));
             //msg.setText("I am feeling content because");
         } else if (butFour == false) {
             String first = "I am feeling ";
             String next = "<font color='#E4A130'>happy</font> ";
-            String last = "because";
+            String last = " because";
             msg.setText(Html.fromHtml(first + next + last));
             //msg.setText("I am feeling happy because");
         } else if (butFive == false) {
             String first = "I am feeling ";
             String next = "<font color='#E4A130'>excited</font> ";
-            String last = "because";
+            String last = " because";
             msg.setText(Html.fromHtml(first + next + last));
             //msg.setText("I am feeling excited because");
         }
@@ -198,11 +199,11 @@ public class emoji_response extends AppCompatActivity {
             }
         });
         myDialog.show();
-//        submit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                go to feedback activity
-//            }
-//        });
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(emoji_response.this, Feed_Activity.class));
+            }
+        });
     }
 }

@@ -24,9 +24,16 @@
         <activity
             android:name=".emoji_response"
             android:label="Feeling…" />
-        <activity android:name=".elaborate_activity" />
-        <activity android:name=".Vitals_Activity" />
-        <activity android:name=".Feed_Activity"></activity>
+        <activity android:name=".elaborate_activity"
+            android:label="Feeling..."/>
+        <activity android:name=".Vitals_Activity"
+            android:label="My Vitals"/>
+        <activity android:name=".Feed_Activity"
+            android:label="Feed"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

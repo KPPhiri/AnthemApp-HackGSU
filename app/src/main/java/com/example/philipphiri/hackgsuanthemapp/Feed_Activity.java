@@ -1,10 +1,13 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,10 +23,18 @@ public class Feed_Activity extends AppCompatActivity {
     List<String> comments;
     Button stats;
 
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mTog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mTog);
+        mTog.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         comments = new ArrayList<>();
         comments.add("3/20: No I do not feel good working with a manager that talks down at me.");
         comments.add("3/20: I used to take pride in what I did, now I feel like I let the customer down...");
@@ -35,8 +46,6 @@ public class Feed_Activity extends AppCompatActivity {
         comments.add("3/23: I look for new jobs daily. Hopefully I will be out of here soon");
 
 
-
-
         listViewComments = (ListView) findViewById(R.id.commentList);
         stats = (Button) findViewById(R.id.stats);
         listViewComments.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1 , comments));
@@ -45,10 +54,14 @@ public class Feed_Activity extends AppCompatActivity {
                 startActivity(new Intent(Feed_Activity.this, Vitals_Activity.class));
             }
         });
-}
-
-
-
-
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mTog.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+}
 

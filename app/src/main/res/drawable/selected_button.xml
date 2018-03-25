@@ -10,23 +10,10 @@
                 android:bottomRightRadius="20dp"
                 android:radius="10dp"/>
             <solid
-                android:color="@color/anthemMagenta"/>
+                android:color="@color/anthemRed"/>
         </shape>
 
 
     </item>
-    <item
-        android:state_pressed="true">
-        <shape
-            android:shape="rectangle">
-            <corners
-                android:bottomLeftRadius="20dp"
-                android:topLeftRadius="20dp"
-                android:topRightRadius="20dp"
-                android:bottomRightRadius="20dp"
-                android:radius="10dp"/>
-            <solid
-                android:color="@color/anthemMagenta"/>
-        </shape>
-    </item>
+
 </selector>

@@ -28,7 +28,7 @@
                 android:bottomRightRadius="20dp"
                 android:radius="10dp"/>
             <solid
-                android:color="@color/anthemMagenta"/>
+                android:color="@color/anthemRed"/>
         </shape>
     </item>
 
