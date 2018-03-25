@@ -3,15 +3,21 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#FF000000</color>
 
     <color name="anthemBlue">#1879BF</color>
-    <color name="white">#ffffff</color>
     <color name="anthemRed">#CB6A5C</color>
     <color name="anthemLightBlue">#719ED0</color>
     <color name="anthemMediumBlue">#5393CF</color>
     <color name="anthemRichBlue">#0078AB</color>
-    <color name="anthemOrange">#719ED0</color>
-    <color name="anthemMagenta">#719ED0</color>
+    <color name="anthemOrange">#E4A130</color>
+    <color name="anthemMagenta">#A81882</color>
 
+    <color name="bluedarkest">#053888</color>
+    <color name="bluedark">#094FC0</color>
+    <color name="bluemid">#0C67FF</color>
+    <color name="bluelight">#2A84FF</color>
+    <color name="bluelightest">#56A1FF</color>
 
 </resources>
