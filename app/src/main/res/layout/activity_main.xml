@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer"
     tools:context="com.example.philipphiri.hackgsuanthemapp.MainActivity">
 
+    <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
+        <TextView
         android:id="@+id/emoji_desc"
         android:layout_width="194dp"
         android:layout_height="103dp"
@@ -102,8 +106,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@null"/>
 
-
-
     <Button
         android:id="@+id/why_button"
         android:layout_width="wrap_content"
@@ -119,4 +121,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.796" />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.NavigationView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:menu="@menu/drawermenu"
+    android:layout_gravity="start">
+
+</android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
