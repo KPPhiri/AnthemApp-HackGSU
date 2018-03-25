@@ -238,12 +238,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(new Intent(MainActivity.this, Vitals_Activity.class));
                         break;
                     case R.id.teamVitals:
-                        //Do some thing here
-                        // add navigation drawer item onclick method here
+                        startActivity(new Intent(MainActivity.this, TeamVitals_Activity.class));
                         break;
                     case R.id.companyVitals:
-                        //Do some thing here
-                        // add navigation drawer item onclick method here
+                        startActivity(new Intent(MainActivity.this, CompanyVitals_Activity.class));
                         break;
                     case R.id.about:
                         startActivity(new Intent(MainActivity.this, aboutPage.class));

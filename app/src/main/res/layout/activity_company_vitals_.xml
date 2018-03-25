@@ -5,7 +5,7 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.philipphiri.hackgsuanthemapp.TeamVitals_Activity">
+    tools:context="com.example.philipphiri.hackgsuanthemapp.CompanyVitals_Activity">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
             android:fontFamily="@font/open_sans"
             android:inputType="text"
             android:singleLine="true"
-            android:text="Team Vitals"
+            android:text="Company Vitals"
             android:textSize="28sp"></TextView>
 
     </LinearLayout>
