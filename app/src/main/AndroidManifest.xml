@@ -38,10 +38,14 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".TeamVitals_Activity"
-            android:label="Team Vitals"></activity>
-        <activity android:name=".aboutPage"
-            android:label="About"></activity>
+        <activity
+            android:name=".TeamVitals_Activity"
+            android:label="Team Vitals" />
+        <activity
+            android:name=".aboutPage"
+            android:label="About" />
+        <activity android:name=".CompanyVitals_Activity"
+            android:label="Company Vitals"></activity>
     </application>
 
 </manifest>

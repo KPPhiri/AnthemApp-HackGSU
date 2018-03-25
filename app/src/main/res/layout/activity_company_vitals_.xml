@@ -5,22 +5,23 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.philipphiri.hackgsuanthemapp.TeamVitals_Activity">
+    tools:context="com.example.philipphiri.hackgsuanthemapp.CompanyVitals_Activity">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginBottom="10dp">
-
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans"
             android:textColor="@color/black"
-            android:textSize="28sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Team Vitals" />
-
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="Company Vitals"
+            android:textSize="28sp" />
     </LinearLayout>
 
     <android.support.constraint.ConstraintLayout

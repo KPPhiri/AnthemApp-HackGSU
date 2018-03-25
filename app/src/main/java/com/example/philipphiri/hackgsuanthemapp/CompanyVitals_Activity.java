@@ -18,7 +18,7 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
 import java.util.ArrayList;
 
-public class TeamVitals_Activity extends AppCompatActivity {
+public class CompanyVitals_Activity extends AppCompatActivity {
 
     private HorizontalBarChart vitalsChart;
 
@@ -28,9 +28,8 @@ public class TeamVitals_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_team_vitals_);
+        setContentView(R.layout.activity_company_vitals_);
         initInstances();
-
 //        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 //        mTog = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 //        mDrawerLayout.addDrawerListener(mTog);
@@ -79,7 +78,6 @@ public class TeamVitals_Activity extends AppCompatActivity {
         vitalsChart.getLegend().setEnabled(false);
 
     }
-
     private void initInstances() {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -98,16 +96,16 @@ public class TeamVitals_Activity extends AppCompatActivity {
                 int id = menuItem.getItemId();
                 switch (id) {
                     case R.id.myVitals:
-                        startActivity(new Intent(TeamVitals_Activity.this, Vitals_Activity.class));
+                        startActivity(new Intent(CompanyVitals_Activity.this, Vitals_Activity.class));
                         break;
                     case R.id.teamVitals:
-                        startActivity(new Intent(TeamVitals_Activity.this, TeamVitals_Activity.class));
+                        startActivity(new Intent(CompanyVitals_Activity.this, TeamVitals_Activity.class));
                         break;
                     case R.id.companyVitals:
-                        startActivity(new Intent(TeamVitals_Activity.this, CompanyVitals_Activity.class));
+                        startActivity(new Intent(CompanyVitals_Activity.this, CompanyVitals_Activity.class));
                         break;
                     case R.id.about:
-                        startActivity(new Intent(TeamVitals_Activity.this, aboutPage.class));
+                        startActivity(new Intent(CompanyVitals_Activity.this, aboutPage.class));
                         // add navigation drawer item onclick method here
                         break;
                 }
@@ -116,7 +114,6 @@ public class TeamVitals_Activity extends AppCompatActivity {
         });
 
     }
-
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mTog.onOptionsItemSelected(item)) {
             return true;

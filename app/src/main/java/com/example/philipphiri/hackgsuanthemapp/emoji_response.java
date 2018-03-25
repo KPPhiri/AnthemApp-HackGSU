@@ -22,7 +22,7 @@ import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butFour;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butOne;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butThree;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butTwo;
-@TargetApi(27)
+
 public class emoji_response extends AppCompatActivity {
 
     ImageView emoji;
@@ -166,12 +166,10 @@ public class emoji_response extends AppCompatActivity {
                         startActivity(new Intent(emoji_response.this, Vitals_Activity.class));
                         break;
                     case R.id.teamVitals:
-                        //Do some thing here
-                        // add navigation drawer item onclick method here
+                        startActivity(new Intent(emoji_response.this, TeamVitals_Activity.class));
                         break;
                     case R.id.companyVitals:
-                        //Do some thing here
-                        // add navigation drawer item onclick method here
+                        startActivity(new Intent(emoji_response.this, CompanyVitals_Activity.class));
                         break;
                     case R.id.about:
                         startActivity(new Intent(emoji_response.this, aboutPage.class));
