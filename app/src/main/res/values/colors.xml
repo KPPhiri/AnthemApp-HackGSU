@@ -20,4 +20,6 @@
     <color name="bluelight">#2A84FF</color>
     <color name="bluelightest">#56A1FF</color>
 
+    <color name="DimGray">#696969</color>
+
 </resources>
