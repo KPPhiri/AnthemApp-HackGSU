@@ -25,10 +25,10 @@ public class Feed_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_);
         comments = new ArrayList<>();
-        comments.add("3/20: I will do my best regardless of what I am doing.");
-        comments.add("3/20: I'm enjoying the updates to the break room!");
-        comments.add("3/21: No I do not feel good working with a manager that talks down at me.");
-        comments.add("3/22: I used to take pride in what I did, now I feel like I let the customer down...");
+        comments.add("3/20: No I do not feel good working with a manager that talks down at me.");
+        comments.add("3/20: I used to take pride in what I did, now I feel like I let the customer down...");
+        comments.add("3/21: I will do my best regardless of what I am doing.");
+        comments.add("3/22: I'm enjoying the updates to the break room!");
         comments.add("3/22: Stop the favoritism!!!!!!!!!!!!");
         comments.add("3/23: My manager makes me feel like he is always busy and I feel like I am interrupting him");
         comments.add("3/23: Today really proved team work really does make the dream work");
