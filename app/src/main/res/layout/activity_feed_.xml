@@ -15,16 +15,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="75dp"
+            android:maxWidth="75dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/six" />
+
+
         <TextView
-            android:hint="Weekly comment board"
             android:id="@+id/searchBar"
-            android:layout_width="320dp"
+            android:layout_width="280dp"
             android:layout_height="50dp"
+            android:fontFamily="@font/open_sans"
             android:inputType="text"
             android:singleLine="true"
-            android:textSize="28sp"
-            android:fontFamily="@font/open_sans">
-        </TextView>
+            android:text="Weekly Feed"
+            android:textSize="28sp"></TextView>
 
     </LinearLayout>
 

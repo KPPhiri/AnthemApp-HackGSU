@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.philipphiri.hackgsuanthemapp.TeamVitals_Activity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/searchBar"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/open_sans"
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="Company Vitals"
+            android:textSize="28sp"></TextView>
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/chart1"
+            android:layout_width="338dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"></com.github.mikephil.charting.charts.HorizontalBarChart>
+
+
+        <ImageButton
+            android:paddingLeft="4dp"
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="36dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:maxHeight="75dp"
+            android:maxWidth="75dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/five"
+            app:layout_constraintEnd_toStartOf="@+id/chart1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="44dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:maxHeight="75dp"
+            android:maxWidth="75dp"
+            android:paddingLeft="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/four"
+            app:layout_constraintEnd_toStartOf="@+id/chart1"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="44dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:maxHeight="75dp"
+            android:maxWidth="75dp"
+            android:paddingLeft="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/three"
+            app:layout_constraintEnd_toStartOf="@+id/chart1"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="44dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:maxHeight="75dp"
+            android:maxWidth="75dp"
+            android:paddingLeft="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/two"
+            app:layout_constraintEnd_toStartOf="@+id/chart1"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:maxHeight="75dp"
+            android:maxWidth="75dp"
+            android:paddingLeft="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chart1"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+            app:layout_constraintVertical_bias="0.434" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/drawermenu"
+        android:layout_gravity="start"
+        android:fontFamily="@font/open_sans">
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

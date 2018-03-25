@@ -51,7 +51,7 @@ public class Feed_Activity extends AppCompatActivity {
         listViewComments.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1 , comments));
         stats.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Feed_Activity.this, Vitals_Activity.class));
+                startActivity(new Intent(Feed_Activity.this, TeamVitals_Activity.class));
             }
         });
     }
