@@ -9,15 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".LoadingScreen"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".emoji_response" />
-        <activity android:name=".elaborate_activity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Emotions" />
+        <activity
+            android:name=".emoji_response"
+            android:label="Feeling…" />
+        <activity android:name=".FeedActivity"
+            android:label="Feed"></activity>
     </application>
 
 </manifest>
