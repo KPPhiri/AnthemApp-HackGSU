@@ -1,10 +1,13 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -15,6 +18,7 @@ import java.util.Locale;
 public class Feed_Activity extends AppCompatActivity {
     ListView listViewComments;
     List<String> comments;
+    Button stats;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +38,17 @@ public class Feed_Activity extends AppCompatActivity {
 
 
         listViewComments = (ListView) findViewById(R.id.commentList);
+        stats = (Button) findViewById(R.id.stats);
         listViewComments.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1 , comments));
+        stats.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(Feed_Activity.this, Vitals_Activity.class));
+            }
+        });
+}
+
 
 
 
     }
 
-}
