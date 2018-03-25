@@ -4,6 +4,7 @@ import android.content.Intent;
 
 import android.graphics.drawable.Drawable;
 
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -33,12 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
-        mDrawerLayout.addDrawerListener(mTog);
-        mTog.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        initInstances();
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+//        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+//        mDrawerLayout.addDrawerListener(mTog);
+//        mTog.syncState();
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         one = (ImageButton) findViewById(R.id.imageButton1);
         findViewById(R.id.imageButton1).setOnClickListener(this);
@@ -193,6 +194,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //button.setBackgroundResource(background);
             }
         }
+
+    }
+
+    private void initInstances() {
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mTog);
+        mTog.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationView navigation;
+
+        navigation = (NavigationView) findViewById(R.id.navigation);
+        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id) {
+                    case R.id.myVitals:
+                        startActivity(new Intent(MainActivity.this, Vitals_Activity.class));
+                        break;
+                    case R.id.teamVitals:
+                        //Do some thing here
+                        // add navigation drawer item onclick method here
+                        break;
+                    case R.id.companyVitals:
+                        //Do some thing here
+                        // add navigation drawer item onclick method here
+                        break;
+                    case R.id.about:
+                        //Do some thing here
+                        // add navigation drawer item onclick method here
+                        break;
+                }
+                return false;
+            }
+        });
 
     }
 
