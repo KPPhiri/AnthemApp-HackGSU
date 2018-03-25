@@ -1,7 +1,9 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -21,6 +23,8 @@ public class emoji_response extends AppCompatActivity {
     Button button2;
     Button button3;
     Button button4;
+    boolean buttonNewResponse = false;
+    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,12 @@ public class emoji_response extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.response3);
         button4 = (Button) findViewById(R.id.response4);
         button4.setText("Enter your own response.");
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                buttonNewResponse = true;
+            }
+        });
         if (butOne == false) {
             emoji.setImageResource(R.drawable.emoji1);
 
@@ -75,5 +85,17 @@ public class emoji_response extends AppCompatActivity {
             button2.setText("I couldn't ask for a better team!");
             button3.setText("I am excited for the opportunities at my company.");
         }
+
+        submit = (Button)findViewById(R.id.submit_button);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (buttonNewResponse) {
+                    startActivity(new Intent(emoji_response.this, elaborate_activity.class));
+                } else {
+                    //trigger popup
+                }
+            }
+        });
     }
 }
