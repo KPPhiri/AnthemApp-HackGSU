@@ -7,11 +7,11 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="210dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="12dp"
         android:orientation="vertical"
-
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.775"
@@ -28,23 +28,31 @@
             android:textStyle="bold"
             android:layout_gravity="end"
             android:gravity="center"
-            android:background="@drawable/circlebkg"/>
+            android:background="@drawable/circlebkg"
+            android:fontFamily="@font/open_sans"/>
 
         <TextView
             android:paddingTop="10dp"
             android:id="@+id/contentmsg"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:fontFamily="@font/open_sans"
+            android:textSize="15sp"
             android:text="I am feeling blank because" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="match_parent"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:maxLength="140"
-            android:inputType="textPersonName"
-            android:hint="..." />
+            android:inputType="text|textMultiLine|textShortMessage"
+            android:hint="..."
+            android:textSize="15sp"
+            android:backgroundTint="@color/bluelight"
+            android:textColor="@color/black"
+            android:fontFamily="@font/open_sans"/>
 
         <Button
             android:layout_gravity="center"
@@ -52,7 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
-            android:background="@drawable/rounded_button"/>
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/open_sans_semibold"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

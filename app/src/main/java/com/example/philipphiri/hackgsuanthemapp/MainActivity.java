@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             TextView description;
             description = findViewById(R.id.emoji_desc);
             description.setText("I am feeling happy");
-            butOne = !true; //is this right?
+            butOne = true;
             butTwo = true;
             butThree = true;
             butFour = !butFour;

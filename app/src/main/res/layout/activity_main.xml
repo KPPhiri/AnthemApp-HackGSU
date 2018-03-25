@@ -22,6 +22,7 @@
             android:paddingRight="25dp"
             android:text="I am feeling..."
             android:textColor="@color/black"
+            android:fontFamily="@font/open_sans"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
@@ -125,6 +126,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/why"
         android:textColor="@color/black"
+        android:fontFamily="@font/open_sans_semibold"
         android:background="@drawable/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +140,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/drawermenu"
-        android:layout_gravity="start">
+        android:layout_gravity="start"
+        android:fontFamily="@font/open_sans">
 
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

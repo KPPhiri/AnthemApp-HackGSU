@@ -39,6 +39,7 @@
             android:text="TextView"
             android:textAllCaps="true"
             android:textSize="30dp"
+            android:fontFamily="@font/open_sans"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +57,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Submit"
+            android:fontFamily="@font/open_sans_semibold"
             android:background="@drawable/rounded_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +80,7 @@
             app:layout_constraintVertical_bias="0.706">
 
             <Button
+                android:fontFamily="@font/open_sans_semibold"
                 android:id="@+id/response2"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
@@ -86,10 +89,10 @@
                 android:layout_row="0"
                 android:background="@drawable/response_button"
                 android:paddingLeft="4dp"
-                android:paddingRight="4dp"
-                android:text="Button" />
+                android:paddingRight="4dp" />
 
             <Button
+                android:fontFamily="@font/open_sans_semibold"
                 android:id="@+id/response4"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
@@ -99,10 +102,10 @@
                 android:background="@drawable/response_button"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
-                android:text="Button"
                 />
 
             <Button
+                android:fontFamily="@font/open_sans_semibold"
                 android:id="@+id/response1"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
@@ -112,9 +115,10 @@
                 android:background="@drawable/response_button"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
-                android:text="Button" />
+                 />
 
             <Button
+                android:fontFamily="@font/open_sans_semibold"
                 android:id="@+id/response3"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
@@ -124,7 +128,7 @@
                 android:background="@drawable/response_button"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
-                android:text="Button" />
+                 />
         </GridLayout>
     </android.support.constraint.ConstraintLayout>
 
@@ -132,7 +136,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/drawermenu"
-        android:layout_gravity="start">
+        android:layout_gravity="start"
+        android:fontFamily="@font/open_sans">
 
     </android.support.design.widget.NavigationView>
 
