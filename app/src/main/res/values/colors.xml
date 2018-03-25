@@ -6,5 +6,8 @@
 
     <color name="anthemBlue">#1879bf</color>
     <color name="white">#ffffff</color>
+    <color name="anthemRed">#CB6A5C</color>
+    <color name="anthemLightBlue">#719ED0</color>
+    <color name="anthemMediumBlue">#5393CF</color>
 
 </resources>
