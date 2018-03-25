@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
            view.bringToFront();
            TextView description;
            description = findViewById(R.id.emoji_desc);
-           description.setText("I am feeling bleh");
+           description.setText("I am feeling exhausted..");
             butOne = !butOne;
             butTwo = true;
             butThree = true;
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             view.bringToFront();
             TextView description;
             description = findViewById(R.id.emoji_desc);
-            description.setText("I am feeling eek");
+            description.setText("I am feeling anxious");
             butOne = true;
             butTwo = !butTwo;
             butThree = true;
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             view.bringToFront();
             TextView description;
             description = findViewById(R.id.emoji_desc);
-            description.setText("I am feeling okay");
+            description.setText("I am feeling content");
             butOne = true;
             butTwo = true;
             butThree = !butThree;
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             view.bringToFront();
             TextView description;
             description = findViewById(R.id.emoji_desc);
-            description.setText("I am feeling GREAT!");
+            description.setText("I am feeling excited!");
             butOne = true;
             butTwo = true;
             butThree = true;

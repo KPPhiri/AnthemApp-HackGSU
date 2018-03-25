@@ -1,6 +1,8 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.text.Html;
 import android.view.View;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -26,8 +28,9 @@ public class emoji_response extends AppCompatActivity {
     Button button2;
     Button button3;
     Button button4;
-    boolean buttonNewResponse = false;
     Button submit;
+    boolean buttonNewResponse = false;
+    Dialog myDialog;
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mTog;
@@ -37,6 +40,7 @@ public class emoji_response extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emoji_response);
+        myDialog = new Dialog(this);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
@@ -50,13 +54,8 @@ public class emoji_response extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.response2);
         button3 = (Button) findViewById(R.id.response3);
         button4 = (Button) findViewById(R.id.response4);
-        button4.setText("Enter your own response.");
+        button4.setText("Another Reason?");
 
-        button4.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                buttonNewResponse = true;
-            }
-        });
         if (butOne == false) {
             emoji.setImageResource(R.drawable.emoji1);
 
@@ -102,12 +101,42 @@ public class emoji_response extends AppCompatActivity {
 
         submit = (Button)findViewById(R.id.submit_button);
 
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonNewResponse = true;
+                button1.setBackgroundResource(R.drawable.selected_button);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonNewResponse = true;
+                button2.setBackgroundResource(R.drawable.selected_button);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonNewResponse = true;
+                button3.setBackgroundResource(R.drawable.selected_button);
+
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4.setBackgroundResource(R.drawable.selected_button);
+                showElaboratePopUp(view);
+            }
+        });
+
         submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (buttonNewResponse) {
                     startActivity(new Intent(emoji_response.this, elaborate_activity.class));
                 } else {
-                    //trigger popup
+                    //trigger popup saying to select one
                 }
             }
         });
@@ -119,5 +148,60 @@ public class emoji_response extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showElaboratePopUp(View v) {
+        TextView xclose;
+        Button submit;
+        myDialog.setContentView(R.layout.elaborate_pop_up);
+        xclose = myDialog.findViewById(R.id.xclose);
+        submit = myDialog.findViewById(R.id.submit_btn);
+        TextView msg;
+        msg = myDialog.findViewById(R.id.contentmsg);
+        if (butOne == false) {
+            String first = "I am feeling ";
+            String next = "<font color='#E4A130'>exhausted</font> ";
+            String last = "because";
+            msg.setText(Html.fromHtml(first + next + last));
+            //msg.setText("I am feeling exhausted because");
+
+        } else if (butTwo == false) {
+            String first = "I am feeling ";
+            String next = "<font color='#E4A130'>anxious</font> ";
+            String last = "because";
+            msg.setText(Html.fromHtml(first + next + last));
+            //msg.setText("I am feeling anxious because");
+        } else if (butThree == false) {
+            String first = "I am feeling ";
+            String next = "<font color='#E4A130'>content</font> ";
+            String last = "because";
+            msg.setText(Html.fromHtml(first + next + last));
+            //msg.setText("I am feeling content because");
+        } else if (butFour == false) {
+            String first = "I am feeling ";
+            String next = "<font color='#E4A130'>happy</font> ";
+            String last = "because";
+            msg.setText(Html.fromHtml(first + next + last));
+            //msg.setText("I am feeling happy because");
+        } else if (butFive == false) {
+            String first = "I am feeling ";
+            String next = "<font color='#E4A130'>excited</font> ";
+            String last = "because";
+            msg.setText(Html.fromHtml(first + next + last));
+            //msg.setText("I am feeling excited because");
+        }
+        xclose.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.show();
+//        submit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                go to feedback activity
+//            }
+//        });
     }
 }

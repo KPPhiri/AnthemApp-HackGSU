@@ -14,10 +14,12 @@
 
         <TextView
             android:id="@+id/emoji_desc"
-            android:layout_width="300dp"
+            android:layout_width="280dp"
             android:layout_height="150dp"
             android:background="@drawable/speech_bubble"
             android:gravity="center"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
             android:text="I am feeling..."
             android:textColor="@color/black"
             android:textSize="30sp"
