@@ -1,6 +1,7 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -29,11 +30,13 @@ public class Feed_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
-        mDrawerLayout.addDrawerListener(mTog);
-        mTog.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        initInstances();
+
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+//        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+//        mDrawerLayout.addDrawerListener(mTog);
+//        mTog.syncState();
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         comments = new ArrayList<>();
         comments.add("3/20: No I do not feel good working with a manager that talks down at me.");
@@ -54,6 +57,42 @@ public class Feed_Activity extends AppCompatActivity {
                 startActivity(new Intent(Feed_Activity.this, TeamVitals_Activity.class));
             }
         });
+    }
+    private void initInstances() {
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mTog);
+        mTog.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationView navigation;
+
+        navigation = (NavigationView) findViewById(R.id.navigation);
+        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id) {
+                    case R.id.myVitals:
+                        startActivity(new Intent(Feed_Activity.this, Vitals_Activity.class));
+                        break;
+                    case R.id.teamVitals:
+                        startActivity(new Intent(Feed_Activity.this, TeamVitals_Activity.class));
+                        break;
+                    case R.id.companyVitals:
+                        startActivity(new Intent(Feed_Activity.this, CompanyVitals_Activity.class));
+                        break;
+                    case R.id.about:
+                        startActivity(new Intent(Feed_Activity.this, aboutPage.class));
+                        // add navigation drawer item onclick method here
+                        break;
+                }
+                return false;
+            }
+        });
+
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

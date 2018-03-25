@@ -44,7 +44,8 @@
         <activity
             android:name=".aboutPage"
             android:label="About" />
-        <activity android:name=".CompanyVitals_Activity"></activity>
+        <activity android:name=".CompanyVitals_Activity"
+            android:label="Company Vitals"></activity>
     </application>
 
 </manifest>

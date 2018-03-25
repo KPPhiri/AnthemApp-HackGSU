@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/myVitals" android:title="My Vitals" android:icon="@drawable/ic_android_black_24dp"/>
+    <item android:id="@+id/myVitals" android:title="My Vitals" />
     <item android:id="@+id/teamVitals" android:title="Team Vitals"/>
     <item android:id="@+id/companyVitals" android:title="Company Vitals"/>
-    <item android:id="@+id/about" android:title="About" android:icon="@drawable/ic_android_black_24dp"/>
+    <item android:id="@+id/about" android:title="About"/>
 </menu>

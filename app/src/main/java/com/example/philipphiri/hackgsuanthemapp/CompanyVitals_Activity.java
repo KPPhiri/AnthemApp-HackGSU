@@ -1,5 +1,7 @@
 package com.example.philipphiri.hackgsuanthemapp;
 
+import android.content.Intent;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,12 +29,12 @@ public class CompanyVitals_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_vitals_);
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        mTog = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
-        mDrawerLayout.addDrawerListener(mTog);
-        mTog.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        initInstances();
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+//        mTog = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+//        mDrawerLayout.addDrawerListener(mTog);
+//        mTog.syncState();
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         vitalsChart = (HorizontalBarChart) findViewById(R.id.chart1);
         vitalsChart.setDrawBarShadow(false);
@@ -76,7 +78,42 @@ public class CompanyVitals_Activity extends AppCompatActivity {
         vitalsChart.getLegend().setEnabled(false);
 
     }
+    private void initInstances() {
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mTog);
+        mTog.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationView navigation;
+
+        navigation = (NavigationView) findViewById(R.id.navigation);
+        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id) {
+                    case R.id.myVitals:
+                        startActivity(new Intent(CompanyVitals_Activity.this, Vitals_Activity.class));
+                        break;
+                    case R.id.teamVitals:
+                        startActivity(new Intent(CompanyVitals_Activity.this, TeamVitals_Activity.class));
+                        break;
+                    case R.id.companyVitals:
+                        startActivity(new Intent(CompanyVitals_Activity.this, CompanyVitals_Activity.class));
+                        break;
+                    case R.id.about:
+                        startActivity(new Intent(CompanyVitals_Activity.this, aboutPage.class));
+                        // add navigation drawer item onclick method here
+                        break;
+                }
+                return false;
+            }
+        });
+
+    }
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mTog.onOptionsItemSelected(item)) {
             return true;

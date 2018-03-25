@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.support.design.widget.NavigationView;
 import android.text.Html;
 import android.view.View;
 import android.support.v4.widget.DrawerLayout;
@@ -21,7 +22,7 @@ import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butFour;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butOne;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butThree;
 import static com.example.philipphiri.hackgsuanthemapp.MainActivity.butTwo;
-@TargetApi(27)
+
 public class emoji_response extends AppCompatActivity {
 
     ImageView emoji;
@@ -43,12 +44,12 @@ public class emoji_response extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emoji_response);
         myDialog = new Dialog(this);
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
-        mDrawerLayout.addDrawerListener(mTog);
-        mTog.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        initInstances();
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+//        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+//        mDrawerLayout.addDrawerListener(mTog);
+//        mTog.syncState();
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         emoji = (ImageView) findViewById(R.id.emoji_imageView);
         emoji_emotion = (TextView) findViewById(R.id.emoji_emotion);
@@ -143,6 +144,42 @@ public class emoji_response extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void initInstances() {
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        mTog = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mTog);
+        mTog.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationView navigation;
+
+        navigation = (NavigationView) findViewById(R.id.navigation);
+        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id) {
+                    case R.id.myVitals:
+                        startActivity(new Intent(emoji_response.this, Vitals_Activity.class));
+                        break;
+                    case R.id.teamVitals:
+                        startActivity(new Intent(emoji_response.this, TeamVitals_Activity.class));
+                        break;
+                    case R.id.companyVitals:
+                        startActivity(new Intent(emoji_response.this, CompanyVitals_Activity.class));
+                        break;
+                    case R.id.about:
+                        startActivity(new Intent(emoji_response.this, aboutPage.class));
+                        // add navigation drawer item onclick method here
+                        break;
+                }
+                return false;
+            }
+        });
+
     }
 
     @Override
