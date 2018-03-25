@@ -73,7 +73,7 @@ public class Vitals_Activity extends AppCompatActivity {
         dataSets.add(set1);
         BarData data = new BarData(dataSets);
         data.setValueTextSize(10f);
-        data.setBarWidth(.6f);
+        data.setBarWidth(.4f);
         vitalsChart.setData(data);
         vitalsChart.getLegend().setEnabled(false);
 

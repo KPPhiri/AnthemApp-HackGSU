@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mTog;
+    private TextView warning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mDrawerLayout.addDrawerListener(mTog);
 //        mTog.syncState();
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        warning = findViewById(R.id.warning);
         one = (ImageButton) findViewById(R.id.imageButton1);
         findViewById(R.id.imageButton1).setOnClickListener(this);
         two = (ImageButton) findViewById(R.id.imageButton2);
@@ -68,7 +69,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         whyButton = (Button)findViewById(R.id.why_button);
         whyButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,emoji_response.class));
+                if (!(butOne && butTwo && butThree && butFour && butFive)) {
+                    startActivity(new Intent(MainActivity.this,emoji_response.class));
+                 } else {
+                    warning.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -118,6 +123,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butThree = true;
             butFour = true;
             butFive = true;
+            if (!butOne) {
+                warning.setVisibility(View.INVISIBLE);
+            }
         } else if (view.getId() == R.id.imageButton2) {
             enlarge(two, R.drawable.two, R.id.imageButton2, butTwo);
             view.bringToFront();
@@ -129,6 +137,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butThree = true;
             butFour = true;
             butFive = true;
+            if (!butTwo) {
+                warning.setVisibility(View.INVISIBLE);
+            }
         } else if (view.getId() == R.id.imageButton3) {
             enlarge(three, R.drawable.three, R.id.imageButton3, butThree);
             view.bringToFront();
@@ -140,6 +151,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butThree = !butThree;
             butFour = true;
             butFive = true;
+            if (!butThree) {
+                warning.setVisibility(View.INVISIBLE);
+            }
         } else if (view.getId() == R.id.imageButton4) {
             enlarge(four, R.drawable.four, R.id.imageButton4, butFour);
             view.bringToFront();
@@ -151,6 +165,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butThree = true;
             butFour = !butFour;
             butFive = true;
+            if (!butFour) {
+                warning.setVisibility(View.INVISIBLE);
+            }
         } else if (view.getId() == R.id.imageButton5) {
             enlarge(five, R.drawable.five, R.id.imageButton5, butFive);
             view.bringToFront();
@@ -162,6 +179,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butThree = true;
             butFour = true;
             butFive = !butFive;
+            if (!butFive) {
+                warning.setVisibility(View.INVISIBLE);
+            }
         }
 
     }
