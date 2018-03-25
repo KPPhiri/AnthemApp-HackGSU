@@ -5,11 +5,11 @@
         android:drawable="@color/white"/>
     <!-- Place bitmap in center-->
     <item
-        android:width="270dp"
-        android:height="170dp"
+        android:width="280dp"
+        android:height="150dp"
         android:gravity="center">
         <bitmap
-            android:src="@drawable/anthemlogowhite"/>
+            android:src="@drawable/anthemlogoblack"/>
     </item>
 
 </layer-list>

@@ -39,6 +39,7 @@
             android:text="TextView"
             android:textAllCaps="true"
             android:textSize="30dp"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -55,6 +56,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Submit"
+            android:background="@drawable/rounded_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,52 +64,66 @@
             app:layout_constraintVertical_bias="0.982" />
 
         <GridLayout
-            android:layout_width="322dp"
+            android:layout_width="328dp"
             android:layout_height="248dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.773">
+            app:layout_constraintVertical_bias="0.706">
 
             <Button
-                android:layout_gravity="center"
                 android:id="@+id/response2"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
                 android:layout_column="2"
+                android:layout_gravity="center"
                 android:layout_row="0"
+                android:background="@drawable/response_button"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
                 android:text="Button" />
 
             <Button
-                android:layout_gravity="center"
                 android:id="@+id/response4"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
                 android:layout_column="2"
+                android:layout_gravity="center"
                 android:layout_row="1"
-                android:text="Button" />
+                android:background="@drawable/response_button"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Button"
+                />
 
             <Button
-                android:layout_gravity="center"
                 android:id="@+id/response1"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
                 android:layout_column="1"
+                android:layout_gravity="center"
                 android:layout_row="0"
+                android:background="@drawable/response_button"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
                 android:text="Button" />
 
             <Button
-                android:layout_gravity="center"
                 android:id="@+id/response3"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
                 android:layout_column="1"
+                android:layout_gravity="center"
                 android:layout_row="1"
+                android:background="@drawable/response_button"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
                 android:text="Button" />
         </GridLayout>
     </android.support.constraint.ConstraintLayout>

@@ -14,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,6 +108,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == R.id.imageButton1) {
            enlarge(one, R.drawable.one, R.id.imageButton1, butOne);
+           view.bringToFront();
+           TextView description;
+           description = findViewById(R.id.emoji_desc);
+           description.setText("I am feeling bleh");
             butOne = !butOne;
             butTwo = true;
             butThree = true;
@@ -114,6 +119,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butFive = true;
         } else if (view.getId() == R.id.imageButton2) {
             enlarge(two, R.drawable.two, R.id.imageButton2, butTwo);
+            view.bringToFront();
+            TextView description;
+            description = findViewById(R.id.emoji_desc);
+            description.setText("I am feeling eek");
             butOne = true;
             butTwo = !butTwo;
             butThree = true;
@@ -121,6 +130,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butFive = true;
         } else if (view.getId() == R.id.imageButton3) {
             enlarge(three, R.drawable.three, R.id.imageButton3, butThree);
+            view.bringToFront();
+            TextView description;
+            description = findViewById(R.id.emoji_desc);
+            description.setText("I am feeling okay");
             butOne = true;
             butTwo = true;
             butThree = !butThree;
@@ -128,6 +141,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butFive = true;
         } else if (view.getId() == R.id.imageButton4) {
             enlarge(four, R.drawable.four, R.id.imageButton4, butFour);
+            view.bringToFront();
+            TextView description;
+            description = findViewById(R.id.emoji_desc);
+            description.setText("I am feeling happy");
             butOne = !true; //is this right?
             butTwo = true;
             butThree = true;
@@ -135,6 +152,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             butFive = true;
         } else if (view.getId() == R.id.imageButton5) {
             enlarge(five, R.drawable.five, R.id.imageButton5, butFive);
+            view.bringToFront();
+            TextView description;
+            description = findViewById(R.id.emoji_desc);
+            description.setText("I am feeling GREAT!");
             butOne = true;
             butTwo = true;
             butThree = true;
@@ -152,14 +173,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             but.setScaleX(x);
             but.setScaleY(y);
-            but.setBackgroundResource(background);
+            //but.setBackgroundResource(background);
         } else {
             float x = 1;
             float y = 1;
 
             but.setScaleX(x);
             but.setScaleY(y);
-            but.setBackgroundResource(background);
+            //but.setBackgroundResource(background);
         }
 
         for(ImageButton button: buttons) {
