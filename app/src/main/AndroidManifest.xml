@@ -25,7 +25,8 @@
             android:name=".emoji_response"
             android:label="Feeling…" />
         <activity android:name=".elaborate_activity" />
-        <activity android:name=".Vitals_Activity"></activity>
+        <activity android:name=".Vitals_Activity" />
+        <activity android:name=".Feed_Activity"></activity>
     </application>
 
 </manifest>
