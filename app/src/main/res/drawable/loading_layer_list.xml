@@ -2,21 +2,14 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Fill background with a solid color-->
     <item
-        android:drawable="@color/colorAccent"/>
+        android:drawable="@color/white"/>
     <!-- Place bitmap in center-->
     <item
-        android:width="200dp"
-        android:height="200dp"
+        android:width="270dp"
+        android:height="170dp"
         android:gravity="center">
         <bitmap
-            android:src="@drawable/temp"/>
+            android:src="@drawable/anthemlogowhite"/>
     </item>
-    <item
-        android:top="20dp"
-        android:width="200dp"
-        android:height="100dp"
-        android:gravity="top|center_horizontal">
-        <bitmap
-            android:src="@drawable/temp"/>
-    </item>
+
 </layer-list>
