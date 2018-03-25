@@ -4,10 +4,14 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="anthemBlue">#1879bf</color>
+    <color name="anthemBlue">#1879BF</color>
     <color name="white">#ffffff</color>
     <color name="anthemRed">#CB6A5C</color>
     <color name="anthemLightBlue">#719ED0</color>
     <color name="anthemMediumBlue">#5393CF</color>
+    <color name="anthemRichBlue">#0078AB</color>
+    <color name="anthemOrange">#719ED0</color>
+    <color name="anthemMagenta">#719ED0</color>
+
 
 </resources>
