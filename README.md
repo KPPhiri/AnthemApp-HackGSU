@@ -6,3 +6,13 @@ An application that is based off of the company Anthem's app, Vitals. It helps a
 * Coded in Java
 
 <img alt="Emotion" src="imgs/AnthemMood.png"  width="20%"  height="20%"><img alt="Choice" src="imgs/AnthemChoice.png"  width="20%"  height="20%"><img alt="Reasoning" src="imgs/AnthemReason.png"  width="20%"  height="46%"><img alt="Vitals" src="imgs/AnthemVitals.png"  width="20%"  height="20%"><img alt="Anonymous Feed" src="imgs/AnthemFeed.png"  width="20%"  height="20%">
+
+### Contributions
+* Kee-Bum Phiri
+  * Worked on front-end functionality
+* Bianca Guerrero
+  * UI/UX design
+  * Worked on front-end functionality
+* Yuri Ahn
+  * UI/UX design
+  * Worked on front-end functionality
